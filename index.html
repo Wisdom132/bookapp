@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+  </head>
+  <link
+    rel="stylesheet"
+    href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+    crossorigin="anonymous"
+  />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <link rel="stylesheet" href="style.css" />
+
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+  <body>
+      <div id="app">
+          <nav class="navbar navbar-expand-lg nav-bar-head">
+      <div class="container">
+        <a class="navbar-brand text-light" href="#"
+          >Mind and Fist</a
+        >
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+        
+        <i class="fas fa-bars text-light"></i>
+          <!-- <span class="navbar-toggler-icon"></span> -->
+        </button>
+        <div
+          class="collapse navbar-collapse justify-content-end"
+          id="navbarNav"
+        >
+          <ul class="navbar-nav ">
+            <li class="nav-item active">
+              <a class="nav-link" href="#">Home </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Features</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <header id="header">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6">
+            <h1 class="header-title">
+                
+              The Crackhead Hustle Writing Method
+            </h1>
+            <p class="header-para">
+              Discover previously hidden secrets to up your writing game 10
+              levels in 10 days or less
+            </p>
+         
+            <button class="btn header-btn" data-toggle="modal" data-target="#emailform">Get Your copy Now</button>
+          </div>
+        </div>
+      </div>
+    </header>
+
+
+    <div class="modal fade" id="emailform" tabindex="-1" role="dialog" aria-labelledby="emailformTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="emailformTitle">Modal title</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form> 
+            <label for="email">Email</label>
+            <input type="text" v-model="email" id="email" class="form-control" placeholder="valid email address">
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <paystack
+        :amount="amount"
+        :email="email"
+        :paystackkey="paystackkey"
+        :reference="reference"
+        :callback="callback"
+        :close="close"
+        :embed="false"
+       
+         class="btn btn-primary"
+    >
+     Make Payment
+    </paystack>
+      </div>
+    </div>
+  </div>
+</div>
+    <section>
+      <div class="container">
+        <div class="row mt-4">
+          <div class="col-md-4">
+            <h3 class="feature-head"><strong>Out From The Crowd</strong> </h3>
+            <p class="feature-para">
+              There has never been more opportunities for writers, but there has
+              never been more competition. It's time to become good enough to
+              capitalize.
+            </p>
+          </div>
+          <div class="col-md-4">
+            <h3 class="feature-head"><strong>Build A Loyal Following</strong></h3>
+            <p class="feature-para">
+              Find your tribe and have them more engaged than crackheads.
+              Professional writing will have your audience growing around the
+              clock.
+            </p>
+          </div>
+          <div class="col-md-4">
+            <h3 class="feature-head"><strong>Get Paid With Your Writing</strong> </h3>
+            <p class="feature-para">
+              Stop wasting time and playing around. Learn to make your passion
+              pay and leave that nasty job behind.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="quote-section">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <p class="quote-para mt-5 mb-5">
+              The Crackhead Hustle Writing Method: 10 Easy Days To More
+              Profitable Prose
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <div class="row mt-5">
+          <div class="col-md-6">
+            <h6>Aren’t you sick and tired of being a “starving artist”?</h6>
+            <p>Don’t you hate:</p>
+            <ul>
+              <li>
+                Never standing out even though you’re a better writer than most
+                content creators?
+              </li>
+              <li>Not seeing your audience grow--or worse, shrink?</li>
+              <li>Working a job you hate because your passion doesn’t pay?</li>
+              <li>Seeing writers with half your talent go 10 times as far?</li>
+            </ul>
+            <p class="book1-para">
+              <strong>Wouldn’t you like to get paid from your writing?</strong>
+            </p>
+            <p class="book1-head">
+              It’s time to stop leaving money on the table!
+            </p>
+            <p class="book1-para pt-4">
+              It’s never been easier to make money as a writer... But there has
+              also never been more competition. If you want to make money from
+              your writing, you <b>need to be damn good</b> at it. Let me show
+              you how to get the competitive edge.
+            </p>
+          </div>
+          <div class="col-md-6">
+            <figure>
+              <img src="image/book.jpg" class="img-fluid" alt="" />
+            </figure>
+          </div>
+        </div>
+        <div class="row mt-4 mb-4">
+          <div class="col-md-12 text-center">
+            <button class="btn header-btn">Get Your copy Now</button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section style="height:100px;background-color:red">
+      <div class="row">
+        <div class="col-md-12"></div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <div class="row mt-5">
+          <div class="col-md-6">
+            <figure>
+              <img src="image/man-laptop.png" class="img-fluid" alt="" />
+            </figure>
+          </div>
+          <div class="col-md-6">
+            <h1 class="text-center mb-5">
+              The Crackhead's<br />
+              Methods
+            </h1>
+            <p>Don’t you hate:</p>
+            <ul>
+              <li>
+                Never standing out even though you’re a better writer than most
+                content creators?
+              </li>
+              <li>Not seeing your audience grow--or worse, shrink?</li>
+              <li>Working a job you hate because your passion doesn’t pay?</li>
+              <li>Seeing writers with half your talent go 10 times as far?</li>
+            </ul>
+            <p class="book1-para">
+              <strong>Wouldn’t you like to get paid from your writing?</strong>
+            </p>
+            <p class="book1-head">
+              It’s time to stop leaving money on the table!
+            </p>
+            <p class="book1-para pt-4">
+              It’s never been easier to make money as a writer... But there has
+              also never been more competition. If you want to make money from
+              your writing, you <b>need to be damn good</b> at it. Let me show
+              you how to get the competitive edge.
+            </p>
+          </div>
+        </div>
+        <div class="row mt-4 mb-4">
+          <div class="col-md-12 text-center">
+            <button class="btn header-btn">Get Your copy Now</button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="quote-section">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <p class="quote-para mt-5 mb-5">
+              Great writing will allow you to make a living with:
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <div class="row mt-5">
+          <div class="col-md-6">
+            <ul>
+              <li>Books and ebooks</li>
+              <li>Email marketing</li>
+              <li>Personal branding</li>
+              <li>Advertisements and paid traffic</li>
+              <li>Blogging</li>
+              <li>Social media marketing</li>
+              <li>Freelance writing</li>
+              <li>Drop shipping and E-commerce</li>
+              <li>And so much more</li>
+              <p>Writing is the one skill to rule all other skills.</p>
+              <p class="book1-para pt-1">
+                It’s the source skill that will ALWAYS get you paid; but you
+                need to practice the right techniques the right way or you’re
+                never going to grow an audience or make money.
+              </p>
+              <p class="book1-para pt-1">
+                By developing this source skill, you’ll quickly have profitable
+                success in any location independent business model you choose.
+              </p>
+
+              <p>
+                I promise that you can massively improve this skill in just a
+                few short weeks using The Crackhead Hustle Method.
+              </p>
+            </ul>
+          </div>
+          <div class="col-md-6">
+            <figure>
+              <img src="image/man-laptop2.png" class="img-fluid" alt="" />
+            </figure>
+          </div>
+        </div>
+        <div class="row mt-4 mb-4">
+          <div class="col-md-12 text-center">
+            <button class="btn header-btn">Get Your copy Now</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="quote-section">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <p class="quote-para mt-5 mb-5">
+              What You Get...
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <div class="row mt-5">
+          <div class="col-md-6">
+            <h6>Aren’t you sick and tired of being a “starving artist”?</h6>
+            <p class="book1-para pt-4">
+              The Crackhead Hustle Writing Method is specifically designed to
+              improve your writing in the shortest amount of time.
+            </p>
+
+            <p class="book1-para pt-1">
+              If you’re a beginner, you’ll learn the fundamentals that most
+              writers never develop. Without these fundamentals, you’ll be lost
+              in a crowd of wannabes who have to rely on shock and awe to be
+              read instead of talent and skill.
+            </p>
+            <p class="book1-para pt-1">
+              If you’ve been writing for a while, but you can’t seem to grow or
+              profit from your work, these principles will QUICKY and EASILY get
+              you over the hump.
+            </p>
+
+            <p>
+              And if you’re a seasoned veteran, you’re still going to find some
+              new tools to further weaponize your words and dramatically
+              increase what you earn.
+            </p>
+            <p></p>
+            <p class="book1-para pt-1">
+              It’s never been easier to make money as a writer... But there has
+              also never been more competition. If you want to make money from
+              your writing, you <b>need to be damn good</b> at it. Let me show
+              you how to get the competitive edge.
+            </p>
+          </div>
+          <div class="col-md-6">
+            <figure>
+              <img src="image/book.jpg" class="img-fluid" alt="" />
+            </figure>
+          </div>
+        </div>
+        <div class="row mt-4 mb-4">
+          <div class="col-md-12 text-center">
+            <button class="btn header-btn">Get Your copy Now</button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="quote-section">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <p class="quote-para mt-5 mb-5">
+              In my powerful new guide, I reveal:
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section>
+      <div class="container">
+        <div class="row mt-4 mb-4">
+          <div class="col-md-12">
+            <ul>
+              <li>
+                How ANYONE can become great at writing and profit from it (even
+                if you flunked English or aren’t ‘creative’)
+              </li>
+              <li>
+                The top mistakes new writers make (and how you can develop a
+                year's worth of skill in just over a week)
+              </li>
+              <li>
+                How to capture your reader’s attention and STAND OUT in any
+                crowd (in a sea of noise, you need to stand out or you will
+                drown)
+              </li>
+              <li>
+                How to use your writing to build MASSIVE followings on multiple
+                platforms (and why this will be the most valuable asset you ever
+                build)
+              </li>
+              <li>
+                The secret methods that you can use--starting today--to hook
+                your readers in like crackheads (don’t worry, unlike slangin’
+                them actual crack, these methods are ethical!)
+              </li>
+              <li><strong>And so much more.</strong></li>
+            </ul>
+            <p class="mt-4">
+              I’ve condensed YEARS of my own study, practice, and most
+              importantly, lessons from my mistakes into The Crackhead Hustle
+              Method so you can make the same progress in weeks. <br />
+
+              It’s time to become ‘so good they can’t ignore you’.
+            </p>
+
+            <h1>And here’s a secret...</h1>
+            <p class="mt-4">
+              Becoming a profitable and prolific writer is not about working
+              harder and writing for 12 hours per day.
+            </p>
+            <p class="mt-4">
+              It’s not about reading two books per week. Or even slaving away to
+              develop grammar mastery that is pleasing to English scholars.
+            </p>
+            <p class="mt-4">
+              To become a profitable writer who gets eyes on their content and
+              puts money in the bank, all you need are the fundamentals, a
+              dynamic writing system, and the ability to engage your readers in
+              a unique and exciting way.
+            </p>
+            <h4 class="mt-4"><strong>This DOES NOT take long to master.</strong></h4>
+            <p>If you’re ready to accelerate your writing career at hyperspeed, The Crackhead Hustle Writing Method is for you</p>
+          </div>
+        </div>
+      </div>
+    </section>
+       </section>
+    <section style="height:100px;background-color:red">
+      <div class="row">
+        <div class="col-md-12"></div>
+      </div>
+    </section>
+    <section>
+        <div class="container">
+            <div class="row mt-5 mb-3">
+                <div class="col-md-6 mt-4">
+                    <h3>Limited Time Bonus!</h3>
+                    <p class="book1-para pt-1">In addition to The Crackhead Hustle Writing Method, you’ll receive a list of my email archives that I’ve been sending to my list for years.</p>
+                    <p class="book1-para pt-1">This will be wildly beneficial for you because you’ll see what actually works in the real world. </p>
+                    <p class="book1-para pt-1">You’ll get to see time tested and proven writing that generates great responses with real people.</p>
+                     <button class="btn header-btn">ORDER YOUR COPY NOW FOR ONLY $47!</button>
+                </div>
+                <div class="col-md-6">
+                    <figure><img src="image/brain.png" class="img-fluid" alt=""></figure>
+                </div>
+            </div>
+        </div>
+    </section>
+      </div>
+
+    
+
+    
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+      integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+      integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="https://unpkg.com/vue-paystack/dist/paystack.min.js"></script>
+
+
+    <script src="main.js"></script>
+  </body>
+</html>
